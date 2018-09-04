@@ -1,27 +1,21 @@
 localStorage.setItem("toggleArticles", true);
 var isHiding = localStorage.getItem("toggleArticles");
 
-
  if(isHiding === true){
     localStorage.setItem("toggleArticles", false);
     console.log(isHiding);
   }
 
-
 $(document).ready(function () {
 });
 
-
 $("#scrape-data").on("click", () => {
-   isHiding = false;
-    
+   isHiding = false;   
 
-  if (isHiding === false) {
-  
+  if (isHiding === false) { 
   }
 
   console.log("scrape button clicked!");
-
 });
 
 $.getJSON("/articles", function (data) {
@@ -30,10 +24,6 @@ $.getJSON("/articles", function (data) {
     $("#articles").append("<p data-id='" + data[i]._id + "'>" + data[i].title + "<br /> <a target=_blank href=" + data[i].link + ">" + data[i].link + "</a></p>");
   }
 });
-
-
-
-
 
 $(document).on("click", "p", function () {
   $("#notes").empty();
@@ -56,7 +46,6 @@ $(document).on("click", "p", function () {
       }
     });
 });
-
 
 var savedArticleArray = [];
 $(document).on("click", "#savearticle", () => {

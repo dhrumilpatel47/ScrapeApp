@@ -5,12 +5,10 @@ var ArticleSchema = new Schema({
     type: String,
     required: true
   },
-  
   link: {
     type: String,
     required: true
   },
-
   saved: {
     type: Boolean,
     required: true,

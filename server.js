@@ -1,11 +1,11 @@
 var express = require('express');
 var bodyParser = require("body-parser");
-var PORT = process.env.PORT || 3000;
 var app = express();
-const path = require('path');
 var mongoose = require("mongoose"); 
+const path = require('path');
 var cheerio = require("cheerio");
 var request = require('request');
+var PORT = process.env.PORT || 3000;
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -18,7 +18,7 @@ app.set("view engine", "handlebars");
 
 var db = require("./models");
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/datager";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/news";
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
 
