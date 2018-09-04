@@ -1,0 +1,17 @@
+
+#wrapper {
+    width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5%;
+    float: center;
+}
+
+#articles {
+    display: inline-block;
+    overflow: auto;
+    width: 60%;
+    height: 500px;
+    background-color: #F3F4FA;
+}
+ 
